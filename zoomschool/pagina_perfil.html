@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PÁGINA DE PERFIL</title>
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/menu_barras.css">
+	<link rel="stylesheet" href="css/pagina_perfil.css"> 
+    <link href="fonts/SF-Pro-Text-Bold.otf" rel="stylesheet">
+    <link href="fonts/SF-Pro-Text-Medium.otf" rel="stylesheet">
+    <link href="fonts/SF-Pro-Text-Regular.otf" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="scripts.js"></script>
+</head>
+<body id="body">
+    <div id="debug" style="display: none;"></div>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <div class="header_grid">
+                        <li class="header_grid_l1 LOGO">
+                          <a href="feed.html">
+                            <img src="image/Logo.png" height="70em" alt="logo">
+                          </a>
+                        </li>
+                        <li class="header_grid_l2">
+                            <input type="text" name="txtpesquisa" id="txtpesquisa" placeholder="Pesquisa">
+                            <a href><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="header_grid_l3">
+                            <a href>
+                                <img src="icon/icone_notificacoes.png" alt="Notificações" height="30px">
+                            </a>
+                        </li>
+                        <div class="header_grid_l4" id="dropbtn_tamanho">
+                            <button class="dropbtn" id="dropbtn" onclick="javascript:abrefecha('ex1')">
+                                <div class="dropbtn_grid_l1">
+                                    <label>Nome de Usuário</label>
+                                </div>
+                                <div class="dropbtn_grid_l2">
+                                    <img class="img_perfil" src="image/login2.jpg" alt="" height="30px">
+                                </div>
+                                <div class="dropbtn_grid_l3">
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                            </button>
+                        <div class="dropdown_grid" id="ex1" style="display: none;">
+                            <div class="dropdown_grid_i1">
+                                <a href onclick="alertar()">
+                                    <img src="icon/icone_configuracao.png" alt="" height="25px">
+                                </a>
+                            </div>
+                            <div class="dropdown_grid_l1">
+                                <a href onclick="alertar()">Configurações</a>
+                            </div>
+                            <div class="dropdown_grid_i2">
+                                <a href onclick="alertar()">
+                                    <img src="icon/icone_ajuda.png" alt="Ajuda" height="25px">
+                                </a>
+                            </div>
+                            <div class="dropdown_grid_l2">
+                                <a href onclick="alertar()">Ajuda</a>
+                            </div>
+                            <div class="dropdown_grid_l3">
+                                <a href="index.html">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="">
+                <div class="container_inside">
+                    <div class="resumo">
+                        <ul>
+                            <h3 id="h1">Resumo</h3>
+                            <div class="linha" id="l1"></div>
+                            <div class="grid_ftPerfil">
+                                <li id="grid_img_perfil">
+                                    <img src="image/login2.jpg" alt="" class="img_perfil" height="50em">
+                                </li>
+                                <li id="grid_btn_trocar_ft">
+                                    <button onclick="alertar()" name="btn_trocar_ft" id="btn_trocar_ft">Trocar foto de perfil</button>
+                                </li>
+                                <li id="grid_btn_remover_ft">
+                                    <button onclick="alertar()" name="btn_remover_ft" id="btn_remover_ft">Remover foto de perfil</button>
+                                </li>
+                            </div>
+                            <div class="resumo_grid">
+                                <li class="resumo_grid_l1">
+                                    <label class="label_left" id="lbl_Nome">Nome</label>
+                                </li>
+                                <li class="resumo_grid_i1">
+                                    <input type="text" name="txt_nome" id="txt_nome">
+                                </li>
+                                <li class="resumo_grid_l2" id="nasc">
+                                    <label id="lbl_data_nasc">Data de nascimento</label>
+                                </li>
+                                <li class="resumo_grid_i2">
+                                    <input type="text" name="txt_data" id="txt_data">
+                                </li>
+                                <li class="resumo_grid_ll2">
+                                    <label id="lbl_genero">Gênero</label>
+                                </li>
+                                <li class="resumo_grid_ii2">
+                                    <input type="text" name="txt_genero" id="txt_genero">
+                                </li>
+                                <li class="resumo_grid_l3">
+                                    <Label id="lbl_email">Email</Label>
+                                </li>
+                                <li class="resumo_grid_i3">
+                                    <input type="text" name="txt_email" id="txt_email">
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="educacional">
+                        <ul>
+                            <h3 id="h2">Informações Educacionais</h3>
+                            <div class="linha" id="l2"></div>
+                            <div class="educacional_grid">
+                                <li class="educacional_grid_l1">
+                                    <label id="lbl_registro_acad">Registro acadêmico (RA)</label>
+                                </li>
+                                <li class="educacional_grid_i1">
+                                    <input type="text" name="txt_registro_acad" id="txt_registro_acad">
+                                </li>
+                                <li class="educacional_grid_l2">
+                                    <label id="lbl_posiçao_hie">Posição hierárquica</label>
+                                </li>
+                                <li class="educacional_grid_i2">
+                                    <input type="text" name="txt_posicao_hie" id="txt_posicao_hie">
+                                </li>
+                                <li class="educacional_grid_l3">
+                                    <label id="lbl_instituicao">Instituição</label>
+                                </li>
+                                <li class="educacional_grid_i3">
+                                    <input type="text" name="txt_instituicao" id="txt_instituicao">
+                                </li>
+                                <li class="educacional_grid_l4">
+                                    <label id="lbl_escolaridade_atual">Escolaridade atual</label>
+                                </li>
+                                <li class="educacional_grid_i4">
+                                    <input type="text" name="txt_escolaridade_atual" id="txt_escolaridade_atual">
+                                </li>
+                                <li class="educacional_grid_l5">
+                                    <label id="lbl_ano_formacao">Ano de formação</label>
+                                </li>
+                                <li class="educacional_grid_i5">
+                                    <input type="text" name="txt_ano_formacao" id="txt_ano_formacao">
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="pessoal">
+                        <h3 id="h3">Informações Pessoais</h3>
+                    <div class="linha" id="l3"></div>
+                        <ul>
+                            <div class="pessoal_grid">
+                                <li class="pessoal_grid_l1">
+                                    <label id="lbl_rg">RG</label>
+                                </li>
+                                <li class="pessoal_grid_i1">
+                                    <input type="text" name="txt_rg" id="rg">
+                                </li>
+                                <li class="pessoal_grid_ll1">
+                                    <label id="lbl_cpf">CPF</label>
+                                </li>
+                                <li class="pessoal_grid_ii1">
+                                <input type="text" name="txt_cpf" id="txt_cpf">
+                                </li>
+                                <li class="pessoal_grid_ll2">
+                                    <label id="lbl_nome_social">Nome social</label>
+                                </li>
+                                <li class="pessoal_grid_ii2">
+                                    <input type="text" name="txt_nome_social" id="txt_nome_social">
+                                </li>
+                                <li class="pessoal_grid_l3">
+                                    <label id="lbl_nome_mae">Nome da mãe ou responsável</label>
+                                </li>
+                                <li class="pessoal_grid_i3">
+                                    <input type="text" name="txt_nome_mae" id="txt_nome_mae">
+                                </li>
+                                <li class="pessoal_grid_l4">
+                                    <label id="lbl_nome_pai">Nome do pai ou responsável</label>
+                                </li>
+                                <li class="pessoal_grid_i4">
+                                    <input type="text" name="txt_nome_pai" id="txt_nome_pai">
+                                </li>
+                            <div class="vertical"></div>
+                                <li class="pessoal_grid_l5">
+                                    <label id="lbl_endereco">Endereço</label>
+                                </li>
+                                <li class="pessoal_grid_i5">
+                                    <input type="text" name="txt_endereco" id="txt_endereco">
+                                </li>
+                                <li class="pessoal_grid_l6">
+                                    <label id="lbl_cep">CEP</label>
+                                </li>
+                                <li class="pessoal_grid_i6">
+                                    <input type="text" name="txt_cep" id="txt_cep">
+                                </li>
+                                <li class="pessoal_grid_ll6">
+                                    <label id="lbl_n_residencial">N° Residencial</label>
+                                </li>
+                                <li class="pessoal_grid_ii6">
+                                    <input type="text" name="txt_n_residencial" id="txt_n_residencial">
+                                </li>
+                                <li class="pessoal_grid_l7">
+                                    <label id="lbl_complemento">Complemento</label>
+                                </li>
+                                <li class="pessoal_grid_i7">
+                                    <input type="text" name="complemento" id="complemento">
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>   
+            </form>
+        </main>
+        <div onclick="openMenu(aberto = 2)" id="bl_esq_menu">
+            <div class="um" id="um"></div>
+            <div class="dois" id="dois"></div>
+            <div class="tres" id="tres"></div>
+        </div>
+        <aside id="bl_esq">
+            <div id="checkPage" style="display: none;">perfil</div>
+            <ul>
+                <div id="grid_bl_esq">
+                    <div onclick="closeMenu(aberto = 1)" id="bl_esq_close" data-attr="label">
+                        <div class="quatro" id="quatro"></div>
+                        <div class="cinco" id="cinco"></div>
+                    </div>
+                    <div class="grid_bl_s1" data-attr="label" >
+                        <li>
+                            <img src="image/login2.jpg" class="img_perfil" alt="" height="70em"> 
+                        </li>
+                    </div>
+                    <div class="grid_bl_s2" data-attr="label" >
+                        <li>
+                            <label>Nome de Usuário</label>
+                            <label class="pos_hie">Estudante&thinsp;<img src="icon/icone_meus_dados.png" class="pos_hie_img" alt="" height="10px"></label>
+                        </li>
+                    </div>
+                    <div class="link_aberto grid_bl_l1">
+                        <a onclick="closeMenu(aberto = 1)">
+                            <img src="icon/icone_meus_dados.png" alt="Meus Dados" height="30px">
+                            <li>
+                                <label>Meus dados</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l2">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_equipes.png" alt="Minhas Equipes" height="30px">
+                            <li>
+                                <label>Equipes</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l3">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_trabalhos.png" alt="Meus trabalhos" height="35px">
+                            <li>
+                                <label>Trabalhos</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l4">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_calendario.png" alt="Meu calendário" height="30px">
+                            <li>
+                                <label>Calendário</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l5">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_biblioteca.png" alt="Minha biblioteca" height="30px">
+                            <li>
+                                <label>Biblioteca</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l6">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_financeiro.png" alt="Meu financeiro" height="30px">
+                            <li>
+                                <label>Financeiro</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l7">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_solicitacoes.png" alt="Solicitações" height="30px">
+                            <li>
+                                <label>Solicitações</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l8">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_cursos.png" alt="Cursos" height="30px">
+                            <li>
+                                <label>Cursos</label>
+                            </li>
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </aside>
+        <aside id="bl_dir">
+        <a>
+            <img onclick="alertar()" src="icon/icone_mensagem.png" alt="Caixa de mensagens" height="30px">
+        </a>
+        </aside>
+    </div>
+</body>
+</html>
