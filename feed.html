@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FEED DE NOTÍCIAS</title>
+	<link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/menu_barras.css">
+    <link rel="stylesheet" href="css/feed.css">
+    <link href="fonts/SF-Pro-Text-Bold.otf" rel="stylesheet">
+    <link href="fonts/SF-Pro-Text-Medium.otf" rel="stylesheet">
+    <link href="fonts/SF-Pro-Text-Regular.otf" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="scripts.js"></script>
+</head>
+<body id="body">
+    <div id="debug" style="display: none;"></div>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <div class="header_grid">
+                        <li class="header_grid_l1 LOGO">
+                          <a href="feed.html">
+                            <img src="./imgs/Logo.png" height="70em" alt="logo">
+                          </a>
+                        </li>
+                        <li class="header_grid_l2">
+                            <input type="text" name="txtpesquisa" id="txtpesquisa" placeholder="Pesquisa">
+                            <a href><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="header_grid_l3">
+                            <a href>
+                                <img src="icon/icone_notificacoes.png" alt="Notificações" height="30px">
+                            </a>
+                        </li>
+                        <div class="header_grid_l4_grid">
+                            <li class="header_grid_l4">
+                                <button onclick="goToLogin(redirectToIndex = 1)">
+                                    Entrar
+                                </button>
+                            </li>
+                            <li class="header_grid_l5">
+                                <button class="button_Cadastro" onclick="goToLogin(redirectToIndex = 2)">
+                                    Cadastrar
+                                </button>
+                            </li>
+                        </div>
+                        <li class="header_grid_l6">
+                            <a href onclick="alertar()">
+                                <img src="icon/icone_configuracao.png" alt="" height="30px">
+                            </a>
+                        </li>
+                        <li class="header_grid_l7">
+                            <a href onclick="alertar()">
+                                <img src="icon/icone_ajuda.png" alt="Ajuda" height="30px">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="noticias_grid">
+                <div class="ng_l1">
+                    <img src="https://4.bp.blogspot.com/-2PYHE_Geu98/XHm9vTkQH-I/AAAAAAAADMQ/EikWaMpNB2sUdGDR0VCWqEUoYbe_AWkXgCLcBGAs/s1600/wd.jpg" alt="">
+                    <div class="p">NOTÍCIAS</div>
+                    <div class="label horizontal">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l2">
+                    <img src="https://th.bing.com/th/id/R97c3a164f159ec1378c939b50f44b409?rik=CmlJRSqmpeqbEw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-rQ5e9IA5dx8%2fUUHqcfWHcHI%2fAAAAAAAAArg%2fzvUTJVlgah4%2fs1600%2fAQUI_FICA_A_DICA.JPG&ehk=KWwSPjvambXU%2fVwOY8Cf4idfb2tvt6JZJJKD3T7AK2o%3d&risl=&pid=ImgRaw" alt="">
+                    <div class="p">CURSOS</div>
+                    <div class="label">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l3">
+                    <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2019/01/o-que-%C3%A9-mysql.png" alt="">
+                    <div class="p">CURIOSIDADE</div>
+                    <div class="label">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l4">
+                    <img src="https://th.bing.com/th/id/OIP.KllOvgATY_bekGG-OoiYjAHaD7?pid=ImgDet&rs=1" alt="">
+                    <div class="p">CURIOSIDADE</div>
+                    <div class="label">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l5">
+                    <img src="https://conceptodefinicion.de/wp-content/uploads/2017/10/Javascript2.jpg" alt="">
+                    <div class="p">NOTÍCIAS</div>
+                    <div class="label horizontal">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l6">
+                    <img src="https://extassisnetwork.com/tutoriales/wp-content/uploads/Que-es-CSS.jpg" alt="">
+                    <div class="p vertical">CURSOS</div>
+                    <div class="label vertical2">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l7">
+                    <img src="https://cdn.dribbble.com/users/1771947/screenshots/7292119/photoshop_4x.png" alt="">
+                    <div class="p">CURIOSIDADE</div>
+                    <div class="label">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="ng_l8">
+                    <img src="./imgs/Logo.png" alt="">
+                    <div class="p">CURSOS</div>
+                    <div class="label">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                </div>
+            </div>
+        </main>
+            <div onclick="openMenu(aberto = 2)" id="bl_esq_menu">
+                <div class="um"></div>
+                <div class="dois"></div>
+                <div class="tres"></div>
+            </div>
+        <aside id="bl_esq">
+            <div id="checkPage" style="display: none;">feed</div>
+            <ul>
+                <div id="grid_bl_esq">
+                    <div onclick="closeMenu(aberto = 1)" id="bl_esq_close" data-attr="label">
+                        <div class="quatro" id="quatro"></div>
+                        <div class="cinco" id="cinco"></div>
+                    </div>
+                    <div class="grid_bl_s1" data-attr="label" >
+                        <li>
+                            <img src="./imgs/login2.jpg" class="img_perfil" alt="" height="70em"> 
+                        </li>
+                    </div>
+                    <div class="grid_bl_s2" data-attr="label" >
+                        <li>
+                            <label>Nome de Usuário</label>
+                            <label class="pos_hie">Estudante&thinsp;<img src="icon/icone_meus_dados.png" class="pos_hie_img" alt="" height="10px"></label>
+                        </li>
+                    </div>
+                    <div class="grid_bl_l1">
+                        <a href="pagina_perfil.html">
+                            <img src="icon/icone_meus_dados.png" alt="Meus Dados" height="30px">
+                            <li>
+                                <label>Meus dados</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l2">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_equipes.png" alt="Minhas Equipes" height="30px">
+                            <li>
+                                <label>Equipes</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l3">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_trabalhos.png" alt="Meus trabalhos" height="35px">
+                            <li>
+                                <label>Trabalhos</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l4">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_calendario.png" alt="Meu calendário" height="30px">
+                            <li>
+                                <label>Calendário</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l5">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_biblioteca.png" alt="Minha biblioteca" height="30px">
+                            <li>
+                                <label>Biblioteca</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l6">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_financeiro.png" alt="Meu financeiro" height="30px">
+                            <li>
+                                <label>Financeiro</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l7">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_solicitacoes.png" alt="Solicitações" height="30px">
+                            <li>
+                                <label>Solicitações</label>
+                            </li>
+                        </a>
+                    </div>
+                    <div class="grid_bl_l8">
+                        <a onclick="alertar()">
+                            <img src="icon/icone_cursos.png" alt="Cursos" height="30px">
+                            <li>
+                                <label>Cursos</label>
+                            </li>
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </aside>
+        <aside id="bl_dir">
+        <a>
+            <img onclick="alertar()" src="icon/icone_mensagem.png" alt="Caixa de mensagens" height="30px">
+        </a>
+        </aside>
+    </div>
+</body>
+</html>

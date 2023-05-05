@@ -1,0 +1,500 @@
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* START CRIAÇÃO DA GRID INTERIOR */
+.container_inside{
+    padding: 3% 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas: "re ed"
+                         "pe pe";
+    grid-gap: 3%;
+    max-width: 75%;
+    margin: auto auto;
+    height: 100vh;
+}
+.resumo{
+    grid-area: re;
+}
+.educacional{
+    grid-area: ed;
+}
+.pessoal{
+    grid-area: pe;
+    text-align: center;
+}
+/* END CRIAÇÃO DA GRID INTERIOR */
+
+
+
+/* START ESTILIZAÇÃO GRIDS INTERNAS */
+.container_inside > :nth-child(1){
+    border-radius: 1.5em;
+    background-color: white;
+    height: 100%;
+}
+.container_inside > :nth-child(2){
+    border-radius: 1.5em;
+    background-color: white;
+    height: 100%;
+}
+.container_inside > :nth-child(3){
+    border-radius: 1.5em;
+    background-color: white;
+    height: fit-content;
+}
+.container_inside ul{
+    display: block;
+    list-style-type: none;
+    text-align: center;
+}
+.container_inside h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color_primary_darker);
+    line-height: 2.5em;
+    margin: 0;
+}
+.container_inside label{
+    font-size: 1.1rem;
+}
+/* END ESTILIZAÇÃO GRIDS INTERNAS */
+
+
+
+/* START ESTILO CONTAINER INTERNO */
+.container_inside input{
+    padding: .3em .5em;
+    height: 1.6em;
+    width: calc(100% - 2px - 1em);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    border-color: var(--color_primary_dark);
+    outline: none;
+}
+.container_inside button{
+    height: 2.3em;
+    width: 80%;
+    margin: .3em 0;
+    border-style: none;
+    border-radius: .3em;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.container_inside #btn_trocar_ft{
+    background-color: var(--color_secondary_double);
+    color: var(--color_primary_dark);
+}
+.container_inside #btn_remover_ft{
+    background-color: var(--color_primary_dark);
+    color: white;
+}
+.container_inside #btn_trocar_ft:hover{
+    background-color: var(--color_secondary_dark);
+}
+.container_inside #btn_remover_ft:hover{
+    background-color: var(--color_primary_darker);
+}
+/* END ESTILO CONTAINER INTERNO */
+
+
+
+/* START ESTILO DOS CONTAINERS INTERNOS */
+.linha{
+    width: 60%;
+    height: 2px;
+    border-radius: 3px;
+    background-color: var(--color_secondary_dark);
+    margin: -.8em auto .8em;
+}
+.vertical{
+    grid-area: v;
+    width: 2px;
+    height: 400%;
+    border-radius: 3px;
+    background-color: var(--color_secondary_dark);
+    margin: -.8em auto .8em;
+    transform: translateY(-30%);
+}
+/* END ESTILO DOS CONTAINERS INTERNOS */
+
+
+
+/* START OUTRAS GRIDS DA MAIN */
+    /* RESUMO */
+        /* START GRID INTERNO DO RESUMO */
+.grid_ftPerfil{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "f bt"
+                        "f br";
+    width: 90%;
+    margin: auto auto .9em;
+}
+#grid_img_perfil{
+    grid-area: f;
+    align-self: center;
+    justify-self: end;
+}
+#grid_btn_trocar_ft{
+    grid-area: bt;
+    align-self: end;
+}
+#grid_btn_remover_ft{
+    grid-area: br;
+    align-self: start;
+}
+        /* END GRID INTERNO DO RESUMO */
+.resumo_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-areas: "l1 l1"
+                         "i1 i1"
+                         "l2 ll2"
+                         "i2 ii2"
+                         "l3 l3"
+                         "i3 i3";
+    margin: auto auto;
+    width: 90%;
+    grid-gap: 0 1em;
+    text-align: center;
+}
+.resumo_grid_l1{
+    grid-area: l1;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.resumo_grid_i1{
+    grid-area: i1;
+}
+.resumo_grid_l2{
+    grid-area: l2;
+    justify-self: center;
+    margin: .1em 0 .2em -.5em;
+    word-break: break-all;
+}
+.resumo_grid_i2{
+    grid-area: i2;
+    width: 100%;
+    justify-self: end;
+    margin: .1em 0 .2em 0;
+}
+.resumo_grid_ll2{
+    grid-area: ll2;
+    justify-self: center;
+    margin: 0.1em 0 .2em 0em;
+    word-break: break-all;
+}
+.resumo_grid_ii2{
+    grid-area: ii2;
+    width: 100%;
+    justify-self: start;
+    margin: .1em 0 .2em 0;
+}
+.resumo_grid_l3{
+    grid-area: l3;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.resumo_grid_i3{
+    grid-area: i3;
+}
+    /* EDUCACIONAL */
+.educacional_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    grid-template-areas: "l1 l1"
+                         "i1 i1"
+                         "l2 l2"
+                         "i2 i2"
+                         "l3 l3"
+                         "i3 i3"
+                         "l4 l4"
+                         "i4 i4"
+                         "l5 l5"
+                         "i5 i5";
+    margin: auto auto;
+    width: 90%;
+}
+.educacional_grid_l1{
+    grid-area: l1;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.educacional_grid_i1{
+    grid-area: i1;
+}
+.educacional_grid_l2{
+    grid-area: l2;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.educacional_grid_i2{
+    grid-area: i2;
+}
+.educacional_grid_l3{
+    grid-area: l3;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.educacional_grid_i3{
+    grid-area: i3;
+}
+.educacional_grid_l4{
+    grid-area: l4;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.educacional_grid_i4{
+    grid-area: i4;
+}
+.educacional_grid_l5{
+    grid-area: l5;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.educacional_grid_i5{
+    grid-area: i5;
+}
+    /* PESSOAL */
+.pessoal_grid{
+    display: grid;
+    padding: 3% 3%;
+    grid-template-columns: 1fr 1fr .4fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "l1 ll1 . l5 l5"
+                         "i1 ii1 . i5 i5"
+                         "ll2 ll2 . l6 ll6"
+                         "ii2 ii2 v i6 ii6"
+                         "l3 l3 v l7 l7"
+                         "i3 i3 . i7 i7"
+                         "l4 l4 . . ."
+                         "i4 i4 . b b";
+    margin: auto auto;
+    width: 90%;
+    grid-gap: 0 1em;
+}
+.pessoal_grid_l1{
+    grid-area: l1;
+    justify-self: center;
+    margin: .1em 0 .2em 0;
+    word-break: break-all;
+}
+.pessoal_grid_i1{
+    grid-area: i1;
+    width: 100%;
+    justify-self: start;
+    margin: .1em 0 .2em 0;
+}
+.pessoal_grid_ll1{
+    grid-area: ll1;
+    justify-self: center;
+    margin: .1em 0 .2em 0;
+    word-break: break-all;
+}
+.pessoal_grid_ii1{
+    grid-area: ii1;
+    width: 100%;
+    justify-self: end;
+    margin: .1em 0 .2em 0;
+}
+.pessoal_grid_ll2{
+    grid-area: ll2;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+    word-break: break-all;
+}
+.pessoal_grid_ii2{
+    grid-area: ii2;
+    width: 100%;
+}
+.pessoal_grid_l3{
+    grid-area: l3;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.pessoal_grid_i3{
+    grid-area: i3;
+}
+.pessoal_grid_l4{
+    grid-area: l4;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.pessoal_grid_i4{
+    grid-area: i4;
+}
+.pessoal_grid_l5{
+    grid-area: l5;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.pessoal_grid_i5{
+    grid-area: i5;
+}
+.pessoal_grid_l6{
+    grid-area: l6;
+    justify-self: center;
+    margin: .1em 0 .2em 0;
+    word-break: break-all;
+}
+.pessoal_grid_i6{
+    grid-area: i6;
+    width: 100%;
+    justify-self: start;
+    margin: .1em 0 .2em 0;
+}
+.pessoal_grid_ll6{
+    grid-area: ll6;
+    justify-self: center;
+    margin: .1em 0 .2em 0;
+    word-break: break-all;
+}
+.pessoal_grid_ii6{
+    grid-area: ii6;
+    width: 100%;
+    justify-self: end;
+    margin: .1em 0 .2em 0;
+}
+.pessoal_grid_l7{
+    grid-area: l7;
+    justify-self: left;
+    margin: .1em 0 .2em .7em;
+}
+.pessoal_grid_i7{
+    grid-area: i7;
+}
+.button_grid{
+    grid-area: b;
+}
+/* END OUTRAS GRIDS DA MAIN */
+
+
+.dropbtn{
+    display: grid;
+    grid-template-areas: "l1 l2 l3";
+}
+.dropbtn:hover{
+    background-color: #e2e2e2;
+}
+.dropbtn_grid_l1{
+    grid-area: l2;
+    align-self: center;
+}
+.dropbtn_grid_l2{
+    grid-area: l1;
+    align-self: center;
+}
+.dropbtn_grid_l3{
+    grid-area: l3;
+    align-self: center;
+    justify-self: end;
+    margin: 6px 0 0 6px;
+}
+.dropdown_grid{
+    display: grid;
+    grid-template-areas: "i1 l1"
+                         "i2 l2"
+                         ". l3";
+}
+.dropdown_grid > div:hover, .header_grid_l3:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: fit-content;
+}
+.dropdown_grid > div, .header_grid_l3{
+    padding: 0 5px;
+}
+.dropdown_grid_i1{
+    grid-area: i1;
+    justify-self: center;
+}
+.dropdown_grid_l1{
+    grid-area: l1;
+    word-break: break-all;
+}
+.dropdown_grid_i2{
+    grid-area: i2;
+    justify-self: center;
+}
+.dropdown_grid_l2{
+    grid-area: l2;
+    word-break: break-all;
+}
+.dropdown_grid_l3{
+    grid-area: l3;
+    word-break: break-all;
+}
+
+
+
+/* START RESPONSIVIDADE */
+@media (max-width: 920px) {
+    .container_inside h3{
+        line-height: 1em;
+        margin: 0.7em 0 .8em 0;
+    }
+}
+
+
+
+@media (max-width: 750px) {
+    .container_inside{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "re"
+                             "ed"
+                             "pe";
+        grid-gap: 3%;
+        max-width: 80%;
+        height: 100vh;
+    }
+    .vertical{
+        display: none;
+    }
+    .pessoal_grid{
+        display: grid;
+        padding: 3% 3%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        grid-template-areas: "l1 ll1"
+                             "i1 ii1"
+                             "ll2 ll2"
+                             "ii2 ii2"
+                             "l3 l3"
+                             "i3 i3"
+                             "l4 l4"
+                             "i4 i4"
+                             "l5 l5"
+                             "i5 i5"
+                             "l6 ll6"
+                             "i6 ii6"
+                             "l7 l7"
+                             "i7 i7"
+                             ". ."
+                             "b b";
+        margin: auto auto;
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    #grid_img_perfil > .img_perfil{
+        height: 4em;
+    }
+    .grid_ftPerfil{
+        grid-template-columns: .7fr 2fr;
+    }
+}
